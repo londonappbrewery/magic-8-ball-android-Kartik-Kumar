@@ -1,13 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/activity_main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:paddingRight="16dp"
     android:paddingBottom="16dp"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C8D88A15"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp">
+
+            <TextView
+                android:id="@+id/discription"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#9E9D24"
+                android:paddingLeft="80dp"
+                android:paddingTop="5dp"
+                android:text="@string/discription"
+                android:textAllCaps="true"
+                android:textColor="#00695C"
+                android:textStyle="bold|italic" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+            <ImageView
+                android:id="@+id/imageRoll"
+                android:layout_width="379dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ball1" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/predictButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/predictButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:scrollHorizontally="false"
+                android:text="@string/predict"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </LinearLayout>
 </RelativeLayout>
